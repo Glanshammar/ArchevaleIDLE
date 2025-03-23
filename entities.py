@@ -1,32 +1,25 @@
+from skills import *
+
 class Entity:
     def __init__(self):
-        self.health = 1000
         self.destroyed = False
-    
-    def Destroyed(self):
-        if self.health == 0:
-            self.destroyed = True
 
 
 class LivingEntity(Entity):
-    def __init__(self, levels=[0,0,0]):
+    def __init__(self, hp=1000):
         super().__init__()
-        self.strength_level = levels[0]
-        self.archery_level = levels[1]
-        self.magic_level = levels[2]
-    
-    def TakeDamage(self, amount):
-        self.health -= amount
-    
-    def DealDamage(self, amount, target: Entity):
-        target.TakeDamage(amount)
+        self.health = hp
+        self.strength = Strength()
+        self.archery = Archery()
+        self.magic = Magic()
 
 
 class Player(LivingEntity):
     def __init__(self):
         super().__init__()
-        self.woodcutting_level = 0
-        self.woodcutting_xp = 0
+        self.woodcutting = Woodcutting()
+        self.fishing = Fishing()
 
 class Goblin(LivingEntity):
-    pass
+    def __init__(self, hp=800):
+        super().__init__(hp)

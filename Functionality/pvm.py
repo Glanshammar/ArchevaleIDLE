@@ -1,4 +1,4 @@
-from entities import *
+from Functionality.entities import *
 
 class Combat:
     def __init__(self, target1 : LivingEntity, target2 : LivingEntity):

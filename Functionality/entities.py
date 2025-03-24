@@ -1,4 +1,4 @@
-from skills import *
+from Functionality.skills import *
 
 class Entity:
     def __init__(self):

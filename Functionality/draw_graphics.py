@@ -26,3 +26,11 @@ def DrawSkills(screen, player):
         xp_text = font.render(f"XP {int(skill.xp):,}", True, (255, 255, 255))
         screen.blit(level_text, (text_x, text_y))
         screen.blit(xp_text, (text_x, text_y + font.get_height() + 5))
+
+def DrawBackground(screen, background_path):
+    background = pygame.image.load(background_path)
+    background = pygame.transform.scale(background, (1280, 720))
+    screen.blit(background, (0, 0))
+
+def DrawGraphic(screen, graphic_path, x, y):
+    graphic = pygame.image.load(graphic_path)

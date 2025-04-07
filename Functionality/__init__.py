@@ -3,3 +3,4 @@ from .entities import *
 from .pvm import *
 from .quests import *
 from .skills import *
+from .gui import *
